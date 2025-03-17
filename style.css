@@ -11,3 +11,15 @@ body {
     font-size: 16px;
     margin-top: 20px;
 }
+
+.container {
+    width: 80vw;
+    height: 90vh;
+    background-color: #111;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-gap: 20px;
+}
