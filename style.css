@@ -46,7 +46,6 @@ body {
 }
 
 .image {
-    background-color: brown;
 }
 
 .upload label {
@@ -58,4 +57,11 @@ body {
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.tools ul ,.tools ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
