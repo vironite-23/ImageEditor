@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #222;
@@ -21,5 +22,40 @@ body {
     padding: 0 20px;
     display: grid;
     grid-template-columns: 5fr 3fr;
-    grid-gap: 20px;
+    grid-gap: 30px;
+}
+
+.image-container {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.upload input[type="file"] {
+    display: none;
+}
+
+.image {
+    background-color: brown;
+}
+
+.upload label {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
 }
