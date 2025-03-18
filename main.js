@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fileInput = document.getElementById('file');
     const img = document.getElementById('img');
-    const imageBox = document.querySelector('.imageBox');
+    const imageBox = document.getElementById('imageBox');
 
     const saturate = document.getElementById('saturate');
     const contrast = document.getElementById('contrast');
@@ -15,4 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadLink = document.getElementById('download');
     const resetButton = document.querySelector('.tools ul li span');
 
+    window.addEventListener('load',() => {
+        imageBox.style.display = 'none';
+        downloadLink.style.display = 'none';
+        resetButton.style.display = 'none';
+    })
+
+    fileInput.addEventListener('change',() => {
+        imageBox.style.display = 'block';
+        downloadLink.style.display = 'block';
+        resetButton.style.display = 'block';
+
+        let file = new FileReader();
+        file.readAsDataURL(fileInput.files[0])
+
+        file.onload = function(){
+            img.src = file.result ;
+        }
+    })
 });
