@@ -19,7 +19,7 @@ body {
     background-color: #111;
     margin: auto;
     overflow: auto;
-    padding: 0 20px;
+    padding:20px;
     display: grid;
     grid-template-columns: 5fr 3fr;
     grid-gap: 30px;
