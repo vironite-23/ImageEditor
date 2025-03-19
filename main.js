@@ -38,4 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = file.result;
         };
     }
+
+    let Filters = document.querySelectorAll('ul li input');
+    Filters.forEach(filter => {
+        filter.addEventListener('input',() => {
+            img.style.filter = `
+            
+            saturate(${saturate.value}%)
+            contrast(${contrast.value}%)
+            brightness(${brightness.value}%)
+            grayscale(${grayscale.value})
+            sepia(${sepia.value}%)
+            blur(${blur.value}px)
+            hue-rotate(${hueRotate.value}deg)
+            
+            `
+
+        })
+    })
 });
