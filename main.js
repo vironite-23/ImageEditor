@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleFileChange() {
+
+        ResetTheInputValues();
         imageBox.style.display = 'block';
         downloadLink.style.display = 'block';
         resetButton.style.display = 'block';
@@ -37,6 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         file.onload = function() {
             img.src = file.result;
         };
+
+       
+    }
+
+    function ResetTheInputValues()
+    {
+        img.style.filter = 'none';
+       saturate.value = 100;
+       contrast.value = 100;
+       grayscale.value = 0;
+       brightness.value = 100;
+       sepia.value = 0;
+       blur.value = 0;
+       hueRotate.value = 0;
     }
 
     let Filters = document.querySelectorAll('ul li input');
