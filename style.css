@@ -36,7 +36,7 @@ body {
 
 .image-container img {
     width: 50vw;
-    height: 50vh;
+    height: 70vh;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -97,4 +97,7 @@ body {
     .container {
         grid-template-columns: 1fr;
     }
+        .image-container img {
+            width: 75vw;
+        }
 }
