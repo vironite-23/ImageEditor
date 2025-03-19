@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleFileChange() {
-
         ResetTheInputValues();
         imageBox.style.display = 'block';
         downloadLink.style.display = 'block';
@@ -39,27 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
         file.onload = function() {
             img.src = file.result;
         };
-
-       
     }
 
-    function ResetTheInputValues()
-    {
+    function ResetTheInputValues() {
         img.style.filter = 'none';
-       saturate.value = 100;
-       contrast.value = 100;
-       grayscale.value = 0;
-       brightness.value = 100;
-       sepia.value = 0;
-       blur.value = 0;
-       hueRotate.value = 0;
+        saturate.value = 100;
+        contrast.value = 100;
+        grayscale.value = 0;
+        brightness.value = 100;
+        sepia.value = 0;
+        blur.value = 0;
+        hueRotate.value = 0;
     }
 
-    let Filters = document.querySelectorAll('ul li input');
-    Filters.forEach(filter => {
-        filter.addEventListener('input',() => {
+    let filters = document.querySelectorAll('ul li input');
+    filters.forEach(filter => {
+        filter.addEventListener('input', () => {
             img.style.filter = `
-            
+                saturate(${saturate.value}%)
+                contrast(${contrast.value}%)
+                brightness(${brightness.value}%)
+                grayscale(${grayscale.value})
+                sepia(${sepia.value}%)
+                blur(${blur.value}px)
+                hue-rotate(${hueRotate.value}deg)
+            `;
+        });
+    });
+
+    resetButton.addEventListener('click', () => {
+        ResetTheInputValues();
+    });
+
+    downloadLink.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+
+        // Apply the same filters to the canvas context
+        ctx.filter = `
             saturate(${saturate.value}%)
             contrast(${contrast.value}%)
             brightness(${brightness.value}%)
@@ -67,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
             sepia(${sepia.value}%)
             blur(${blur.value}px)
             hue-rotate(${hueRotate.value}deg)
-            
-            `
+        `;
 
-        })
-    })
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        downloadLink.href = canvas.toDataURL('image/png');
+    });
 });
