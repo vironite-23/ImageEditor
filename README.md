@@ -14,7 +14,7 @@ This is a **JavaScript-based Image Editor** that allows users to **apply filters
 ![Project Screenshot](Images/ProjectImage.png)  
 
 ## 🌍 Live Demo  
-🔗 **Try it here:** [https://unrivaled-froyo-fc33b2.netlify.app/]  
+🔗 **Try it here:** [https://vironite-23.github.io/ImageEditor]  
 
 ## 🛠️ Technologies Used  
 - HTML5  
