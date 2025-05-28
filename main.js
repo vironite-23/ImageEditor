@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saturate = document.getElementById('saturate');
     const contrast = document.getElementById('contrast');
     const brightness = document.getElementById('brightness');
+    const exposure = document.getElementById('exposure');
     const grayscale = document.getElementById('grayscale');
     const sepia = document.getElementById('sepia');
     const blur = document.getElementById('blur');
