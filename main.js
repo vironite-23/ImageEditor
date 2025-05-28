@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const saturate = document.getElementById('saturate');
     const contrast = document.getElementById('contrast');
     const brightness = document.getElementById('brightness');
-    const exposure = document.getElementById('exposure');
     const grayscale = document.getElementById('grayscale');
     const sepia = document.getElementById('sepia');
     const blur = document.getElementById('blur');
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         contrast.value = 128;
         grayscale.value = 0;
         brightness.value = 128;
-        exposure.value = 128;
         sepia.value = 0;
         blur.value = 0;
         hueRotate.value = 0;
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 saturate(${saturate.value}%)
                 contrast(${contrast.value}%)
                 brightness(${brightness.value}%)
-                exposure(${exposure.value}%)
                 grayscale(${grayscale.value})
                 sepia(${sepia.value}%)
                 blur(${blur.value}px)
@@ -84,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             saturate(${saturate.value}%)
             contrast(${contrast.value}%)
             brightness(${brightness.value}%)
-            exposure(${exposure.value}%)
             grayscale(${grayscale.value})
             sepia(${sepia.value}%)
             blur(${blur.value}px)
