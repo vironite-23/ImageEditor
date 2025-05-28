@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function ResetTheInputValues() {
         img.style.filter = 'none';
-        saturate.value = 100;
-        contrast.value = 100;
+        saturate.value = 128;
+        contrast.value = 128;
         grayscale.value = 0;
-        brightness.value = 100;
+        brightness.value = 128;
         sepia.value = 0;
         blur.value = 0;
         hueRotate.value = 0;
